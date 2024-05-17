@@ -1,0 +1,52 @@
+2024-05-12 10:33:08,657 - mmseg - INFO - Iter [80000/160000]	lr: 3.000e-05, eta: 17:10:48, time: 0.729, data_time: 0.005, memory: 10617, decode.loss_ce: 0.3018, decode.acc_seg: 89.4098, aux.loss_ce: 0.1366, aux.acc_seg: 88.1948, loss: 0.4383
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 981/981, 3.7 task/s, elapsed: 266s, ETA:     0s2024-05-12 10:37:34,850 - mmseg - INFO - per class results:
+2024-05-12 10:37:34,851 - mmseg - INFO - 
++-----------------------+-------+-------+
+|         Class         |  IoU  |  Acc  |
++-----------------------+-------+-------+
+|          road         | 94.05 | 96.27 |
+|        parking        | 64.32 | 83.07 |
+|   drivable fallback   |  70.1 | 88.11 |
+|        sidewalk       |  56.4 | 68.08 |
+|       rail track      | 66.25 | 79.66 |
+| non-drivable fallback | 77.44 | 88.01 |
+|         person        | 77.32 | 88.97 |
+|         animal        | 30.04 | 35.64 |
+|         rider         | 85.87 | 93.23 |
+|       motorcycle      | 91.09 | 96.95 |
+|        bicycle        | 89.79 | 94.06 |
+|      autorickshaw     | 90.08 |  95.7 |
+|          car          | 42.17 | 52.03 |
+|         truck         | 71.59 | 79.54 |
+|          bus          | 67.79 | 83.57 |
+|        caravan        | 39.57 | 58.88 |
+|        trailer        | 55.52 | 64.46 |
+|         train         | 65.95 | 77.87 |
+|    vehicle fallback   |  73.2 |  81.1 |
+|          curb         |  24.8 | 26.47 |
+|          wall         | 54.21 | 67.87 |
+|         fence         | 47.03 | 58.85 |
+|       guard rail      |  70.7 |  83.7 |
+|       billboard       | 73.25 | 92.71 |
+|      traffic sign     | 88.46 | 95.17 |
+|       unlabeled       | 97.06 | 98.21 |
++-----------------------+-------+-------+
+2024-05-12 10:37:34,851 - mmseg - INFO - Summary:
+2024-05-12 10:37:34,851 - mmseg - INFO - 
++-------+-------+-------+
+|  aAcc |  mIoU |  mAcc |
++-------+-------+-------+
+| 91.58 | 67.85 | 78.01 |
++-------+-------+-------+
+2024-05-12 10:37:34,908 - mmseg - INFO - The previous best checkpoint /media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation/models/best_mIoU_iter_64000.pth was removed
+2024-05-12 10:37:36,054 - mmseg - INFO - Now best checkpoint is saved as best_mIoU_iter_80000.pth.
+2024-05-12 10:37:36,054 - mmseg - INFO - Best mIoU is 0.6785 at 80000 iter.
+2024-05-12 10:37:36,054 - mmseg - INFO - Exp name: config2.py
+2024-05-12 10:37:36,054 - mmseg - INFO - Iter(val) [981]	aAcc: 0.9158, mIoU: 0.6785, mAcc: 0.7801, IoU.road: 0.9405, IoU.parking: 0.6432, IoU.drivable fallback: 0.7010, IoU.sidewalk: 0.5640,
+ IoU.rail track: 0.6625, IoU.non-drivable fallback: 0.7744, IoU.person: 0.7732, IoU.animal: 0.3004, IoU.rider: 0.8587, IoU.motorcycle: 0.9109, IoU.bicycle: 0.8979, IoU.autorickshaw: 0.9008,
+  IoU.car: 0.4217, IoU.truck: 0.7159, IoU.bus: 0.6779, IoU.caravan: 0.3957, IoU.trailer: 0.5552, IoU.train: 0.6595, IoU.vehicle fallback: 0.7320, IoU.curb: 0.2480, IoU.wall: 0.5421,
+   IoU.fence: 0.4703, IoU.guard rail: 0.7070, IoU.billboard: 0.7325, IoU.traffic sign: 0.8846, IoU.unlabeled: 0.9706, Acc.road: 0.9627, Acc.parking: 0.8307, Acc.drivable fallback: 0.8811,
+    Acc.sidewalk: 0.6808, Acc.rail track: 0.7966, Acc.non-drivable fallback: 0.8801, Acc.person: 0.8897, Acc.animal: 0.3564, Acc.rider: 0.9323, Acc.motorcycle: 0.9695, Acc.bicycle: 0.9406,
+     Acc.autorickshaw: 0.9570, Acc.car: 0.5203, Acc.truck: 0.7954, Acc.bus: 0.8357, Acc.caravan: 0.5888, Acc.trailer: 0.6446, Acc.train: 0.7787, Acc.vehicle fallback: 0.8110, Acc.curb: 0.2647,
+      Acc.wall: 0.6787, Acc.fence: 0.5885, Acc.guard rail: 0.8370, Acc.billboard: 0.9271, Acc.traffic sign: 0.9517, Acc.unlabeled: 0.9821
+

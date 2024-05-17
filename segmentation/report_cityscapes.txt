@@ -1,0 +1,50 @@
+Date: 11/05/2024
+
+ram@workstation:/media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation$ python test.py configs/cityscapes/upernet_internimage_t_512x1024_160k_cityscapes.py ./model_cityscapes/iter_10000.pth  --show-dir './output_cityscapes0/' --eval "mIoU"
+/media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation/ops_dcnv3/modules/dcnv3.py:20: UserWarning: Now, we support DCNv4 in InternImage.
+  warnings.warn('Now, we support DCNv4 in InternImage.')
+2024-05-11 17:07:50,680 - mmseg - INFO - Loaded 500 images
+2024-05-11 17:07:50,681 - mmseg - INFO - using core type: DCNv3
+2024-05-11 17:07:50,681 - mmseg - INFO - using activation layer: GELU
+2024-05-11 17:07:50,681 - mmseg - INFO - using main norm layer: LN
+2024-05-11 17:07:50,681 - mmseg - INFO - using dpr: linear, 0.2
+2024-05-11 17:07:50,681 - mmseg - INFO - level2_post_norm: False
+2024-05-11 17:07:50,681 - mmseg - INFO - level2_post_norm_block_ids: None
+2024-05-11 17:07:50,681 - mmseg - INFO - res_post_norm: False
+2024-05-11 17:07:50,681 - mmseg - INFO - use_dcn_v4_op: False
+/media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation/mmseg_custom/models/losses/cross_entropy_loss.py:230: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+load checkpoint from local path: ./model_cityscapes/iter_10000.pth
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 500/500, 1.3 task/s, elapsed: 376s, ETA:     0sper class results:
+
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 97.63 | 98.36 |
+|    sidewalk   | 81.17 | 92.57 |
+|    building   | 90.71 | 95.08 |
+|      wall     | 50.15 | 55.97 |
+|     fence     |  51.9 | 61.11 |
+|      pole     | 59.35 | 72.98 |
+| traffic light | 59.08 | 71.09 |
+|  traffic sign | 71.58 | 81.44 |
+|   vegetation  | 91.25 | 96.27 |
+|    terrain    | 54.41 | 67.74 |
+|      sky      | 93.55 | 96.66 |
+|     person    | 75.18 | 86.99 |
+|     rider     | 48.39 | 75.82 |
+|      car      | 92.54 | 97.88 |
+|     truck     | 49.71 | 63.74 |
+|      bus      | 53.09 | 69.27 |
+|     train     |  12.2 | 16.42 |
+|   motorcycle  | 43.46 | 62.64 |
+|    bicycle    | 72.56 | 85.22 |
++---------------+-------+-------+
+Summary:
+
++-------+-------+-------+
+|  aAcc |  mIoU |  mAcc |
++-------+-------+-------+
+| 94.83 | 65.68 | 76.17 |
++-------+-------+-------+
+

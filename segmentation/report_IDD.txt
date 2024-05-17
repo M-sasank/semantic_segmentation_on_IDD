@@ -1,0 +1,57 @@
+Date: 11/05/2024
+
+ram@workstation:/media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation$ python test.py config2.py ./models/iter_5000.pth --show-dir './output/' --eval "mIoU"
+/media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation/ops_dcnv3/modules/dcnv3.py:20: UserWarning: Now, we support DCNv4 in InternImage.
+  warnings.warn('Now, we support DCNv4 in InternImage.')
+2024-05-11 16:44:22,820 - mmseg - INFO - Loaded 981 images
+2024-05-11 16:44:22,821 - mmseg - INFO - using core type: DCNv3
+2024-05-11 16:44:22,821 - mmseg - INFO - using activation layer: GELU
+2024-05-11 16:44:22,821 - mmseg - INFO - using main norm layer: LN
+2024-05-11 16:44:22,821 - mmseg - INFO - using dpr: linear, 0.2
+2024-05-11 16:44:22,821 - mmseg - INFO - level2_post_norm: False
+2024-05-11 16:44:22,821 - mmseg - INFO - level2_post_norm_block_ids: None
+2024-05-11 16:44:22,821 - mmseg - INFO - res_post_norm: False
+2024-05-11 16:44:22,821 - mmseg - INFO - use_dcn_v4_op: False
+/media/ram/338f6363-03b7-4ad7-a2be-40c31f59dee4/20230418_backup/ram/Students/B.Tech_2020/sasank/InternImage/segmentation/mmseg_custom/models/losses/cross_entropy_loss.py:230: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+load checkpoint from local path: ./models/iter_5000.pth
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 981/981, 1.7 task/s, elapsed: 587s, ETA:     0sper class results:
+
++-----------------------+-------+-------+
+|         Class         |  IoU  |  Acc  |
++-----------------------+-------+-------+
+|          road         |  92.3 | 95.04 |0
+|        parking        |  56.3 | 80.98 |1
+|   drivable fallback   | 48.77 | 63.63 |2
+|        sidewalk       | 43.81 | 52.31 |3
+|       rail track      | 31.99 |  35.6 |4
+| non-drivable fallback | 57.93 |  81.3 |5
+|         person        | 63.62 | 87.14 |6
+|         animal        |  0.0  |  0.0  |7
+|         rider         | 65.58 | 77.62 |8
+|       motorcycle      | 83.64 | 94.72 |9
+|        bicycle        | 69.34 |  75.2 |10
+|      autorickshaw     | 60.23 | 94.32 |11
+|          car          |  0.0  |  0.0  |12
+|         truck         | 59.19 | 79.82 |13
+|          bus          | 57.86 | 76.99 |14
+|        caravan        | 14.89 | 19.65 |15
+|        trailer        | 22.67 | 23.72 |16
+|         train         | 54.09 | 73.31 |17
+|    vehicle fallback   |  0.0  |  0.0  |18
+|          curb         |  0.0  |  0.0  |19
+|          wall         | 43.89 | 62.13 |20
+|         fence         | 28.05 | 35.01 |21
+|       guard rail      | 59.72 |  72.9 |22
+|       billboard       | 46.45 | 85.23 |23
+|      traffic sign     | 85.51 |  94.6 |24
+|       unlabeled       | 95.78 | 97.85 |25
++-----------------------+-------+-------+
+Summary:
+
++------+-------+-------+
+| aAcc |  mIoU |  mAcc |
++------+-------+-------+
+| 87.2 | 47.75 | 59.96 |
++------+-------+-------+
+
